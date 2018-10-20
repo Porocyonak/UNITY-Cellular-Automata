@@ -84,7 +84,7 @@ public class CaveAlgo : MonoBehaviour {
     /// </summary>
     public void StepMap() { // button calls step
         int[,] tempMap = new int[caveX, caveY];
-        for (int y = 0; y < caveY; y++) {
+        for (int y = 0; y < caveY; y++) { // go through all tiles
             for (int x = 0; x < caveX; x++) {
                 tempMap[x, y] = GetNearTiles(x, y); // check if tile should convert or not
             }
@@ -129,3 +129,13 @@ public class CaveAlgo : MonoBehaviour {
     }
 
 }
+
+/*
+ * Process:
+ * -Initiliaze base map with SpawnBaseWall(), see state visually
+ * -Step through algorithm calling StepMap()
+ * -Call SpawnBaseWall() again to reset the map to a different one
+ *
+ * Can also change percentWalls on the fly to see how it affects the resulting algorithm
+ *
+ */
