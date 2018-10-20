@@ -41,7 +41,7 @@ public class CaveAlgo : MonoBehaviour {
         tiles.Clear(); // clear old map if it exists
         for (int y = 0; y < caveY; y++) {
             for (int x = 0; x < caveX; x++) {
-                GameObject temp = Instantiate(Tile);
+                GameObject temp = Instantiate(Tile); // should use object pooling for more efficiency in a real-world setting
                 temp.transform.position = new Vector3(x,0,y);
                 if (caveMap[x, y] == 1) { // change to black if wall, default to white
                     temp.GetComponent<Renderer>().material.color = Color.black;
