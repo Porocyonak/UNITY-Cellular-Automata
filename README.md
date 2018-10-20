@@ -5,3 +5,5 @@ More info: https://en.wikipedia.org/wiki/Cellular_automaton
 
 Only the .cs file is included, should be straightforward to implement with some basic Unity experience 
 ###### (a couple buttons to call functions, some variable assignments)
+
+![Picture of my unity setup running this](https://i.imgur.com/0mL2eMG.png)
